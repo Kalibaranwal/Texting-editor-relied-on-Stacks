@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Code+Pro&display=swap');
+
+body {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  font-family: 'Roboto Slab', serif;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+textarea#editor {
+  width: 90vw;
+  max-width: 700px;
+  height: 220px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  resize: vertical;
+  background-color: #1e1e2f;
+  color: #f8f8f8;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea#editor:focus {
+  outline: none;
+  box-shadow: 0 8px 24px rgba(37, 117, 252, 0.8);
+  background-color: #25254a;
+}
+
+.buttons {
+  margin: 25px 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttons button {
+  background: linear-gradient(145deg, #36d1dc, #5b86e5);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(54, 209, 220, 0.5);
+  transition: all 0.25s ease;
+  user-select: none;
+  min-width: 110px;
+  text-align: center;
+}
+
+.buttons button:hover {
+  background: linear-gradient(145deg, #5b86e5, #36d1dc);
+  box-shadow: 0 6px 16px rgba(54, 209, 220, 0.8);
+  transform: translateY(-2px);
+}
+
+.buttons button:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.output-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 25px;
+  width: 90vw;
+  max-width: 700px;
+  color: #c1e1ff;
+  box-shadow: 0 6px 20px rgba(9, 63, 122, 0.5);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  min-height: 120px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  user-select: text;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #a0d8ff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 480px) {
+  textarea#editor {
+    height: 150px;
+  }
+  .buttons button {
+    min-width: 90px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  .output-box {
+    font-size: 14px;
+  }
+}
