@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intermediate Web Text Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Text Editor</h1>
+
+  <textarea id="editor" placeholder="Start typing..."></textarea>
+
+  <div class="buttons">
+    <button onclick="insertText()">Insert</button>
+    <button onclick="textEditor.undo()">Undo</button>
+    <button onclick="textEditor.redo()">Redo</button>
+    <button onclick="display()">Display</button>
+  </div>
+
+  <div class="output-box">
+    <h3>Current Content:</h3>
+    <pre id="output"></pre>
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+</html>
